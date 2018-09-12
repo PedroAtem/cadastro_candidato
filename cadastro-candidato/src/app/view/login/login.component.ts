@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CandidatoService } from '../../service/candidato.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+	constructor(
+		private candidatoService: CandidatoService
+	) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		this.candidatoService.getCandidatos().subscribe(
+			data => console.log(data),
+			error => console.log(error),
+			() => console.log("acesso a webapi get ok...")
+		);
+
+		this.candidatoService.getCandidato(23).subscribe(
+			data => console.log(data),
+			error => console.log(error),
+			() => console.log("acesso a webapi get ok...")
+		);
+	}
 
 }
