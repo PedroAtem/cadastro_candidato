@@ -10,10 +10,12 @@ export class CandidatoService {
 		private http: Http
 	) { }
 
+	// pegando todos os candidatos
 	getCandidatos() {
 		return this.http.get('https://delineaapi.herokuapp.com/candidate').map((res:Response) => res.json());
 	}
 
+	// pegando o candidato pelo id
 	getCandidato(pk) {
 		return this.http.get('https://delineaapi.herokuapp.com/candidate/'+pk).map((res:Response) => res.json());
 	}
