@@ -5,16 +5,16 @@
 <div>
     <p>
         <span>Usuário</span>
-        <input type="text" name="usuario">
+        <input type="text" [(ngModel)]="username">
     </p>
 
     <p>
         <span>Senha</span>
-        <input type="password" name="senha">
+        <input type="password" [(ngModel)]="password">
     </p>
 
     <p>
-        <button>Entrar</button>
+        <button (click)="login()">Entrar</button>
         <button>Cadastrar-se</button>
     </p>
 </div>
