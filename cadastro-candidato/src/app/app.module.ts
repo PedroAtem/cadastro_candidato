@@ -6,12 +6,14 @@ import { LoginComponent } from './view/login/login.component';
 import { CadastroComponent } from './view/cadastro/cadastro.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { ListagemComponent } from './view/listagem/listagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    ListagemComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,11 @@ import { FormsModule } from '@angular/forms';
 		{
 			path: 'cadastro',
 			component: CadastroComponent
-		}
+		},
+    {
+      path: 'listagem',
+      component: ListagemComponent
+    }
 	])
   ],
   providers: [],

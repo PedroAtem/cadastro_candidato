@@ -1,0 +1,19 @@
+<table>
+	<tr>
+		<th>Nome Completo</th>
+		<th>E-mail</th>
+		<th>Telefone</th>
+		<th colspan="2">Funcionalidade</th>
+	</tr>
+	<tr *ngFor="let candidato of candidatos">
+		<td>{{ candidato.full_name }}</td>
+		<td>{{ candidato.email }}</td>
+		<td>{{ candidato.phone }}</td>
+		<td>
+			<button>Edit</button>
+		</td>
+		<td>
+			<button>Delete</button>
+		</td>
+	</tr>
+</table>

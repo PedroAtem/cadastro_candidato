@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CandidatoService } from '../../service/candidato.service';
 import { LoginService } from '../../service/login.service';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
 
 	constructor(
 		private candidatoService: CandidatoService,
-		private loginService: LoginService
+		private loginService: LoginService,
+		private router: Router
 	) { }
 
 	ngOnInit() {
@@ -41,6 +43,7 @@ export class LoginComponent implements OnInit {
 					data.refresh_token,
 					data.token_type
 				);
+				this.router.navigate(['/listagem']);
 			},
 			error => {
 				console.log(error)
