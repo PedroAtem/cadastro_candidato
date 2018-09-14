@@ -1,0 +1,37 @@
+<p>
+	nome completo
+	<input type="text" [(ngModel)]="candidato.full_name">
+</p>
+<p>
+	cpf
+	<input type="text" [(ngModel)]="candidato.cpf">
+</p>
+<p>
+	rg
+	<input type="text" [(ngModel)]="candidato.rg">
+</p>
+<p>
+	data de nascimento
+	<input type="text" [(ngModel)]="candidato.birth_date">
+</p>
+<p>
+	telefone
+	<input type="text" [(ngModel)]="candidato.phone">
+</p>
+<p>
+	username
+	<input type="text" [(ngModel)]="candidato.username">
+</p>
+<p>
+	email
+	<input type="email" [(ngModel)]="candidato.email">
+</p>
+<p>
+	senha
+	<input type="password" [(ngModel)]="candidato.password">
+</p>
+
+<p>
+	<button>Cancelar</button>
+	<button (click)="salvar()">Salvar</button>
+</p>

@@ -10,7 +10,7 @@
 		<td>{{ candidato.email }}</td>
 		<td>{{ candidato.phone }}</td>
 		<td>
-			<button>Edit</button>
+			<button [routerLink]="['/edicao', candidato.id]">Edit</button>
 		</td>
 		<td>
 			<button>Delete</button>

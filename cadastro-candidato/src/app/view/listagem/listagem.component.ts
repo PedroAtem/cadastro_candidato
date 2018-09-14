@@ -3,9 +3,9 @@ import { CandidatoService } from '../../service/candidato.service';
 import { LoginService } from '../../service/login.service';
 
 @Component({
-  selector: 'app-listagem',
-  templateUrl: './listagem.component.html',
-  styleUrls: ['./listagem.component.css']
+	selector: 'app-listagem',
+	templateUrl: './listagem.component.html',
+	styleUrls: ['./listagem.component.css']
 })
 export class ListagemComponent implements OnInit {
 
